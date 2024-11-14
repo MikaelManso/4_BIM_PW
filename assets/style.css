@@ -1,0 +1,161 @@
+*{ 
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #dfecfa;
+}
+/* Adicionando um container flexível para o layout lado a lado */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px; /* Aumentando o espaçamento entre as áreas */
+}
+
+/* Estilo do chatbot */
+.chat-container {
+    width: 55%; /* Reduzindo a largura do chat */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 300px; /* Diminuindo a altura do chat */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* Estilo do cabeçalho do chatbot */
+.chat-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo da área das mensagens */
+.chat-box {
+    margin-top: 10px;
+    max-height: 200px; /* Ajustando a altura para caber melhor, la ele */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.texto{
+
+    padding: 10px;
+
+}
+
+/* Estilo das mensagens */
+.chat-message {
+    display: inline-block;
+    max-width: 70%;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Estilo das mensagens do bot */
+.chat-message.bot-message {
+    background-color: #007BFF;
+    color: white;
+    align-self: flex-start;
+    border-radius: 10px 10px 10px 0;
+}
+
+/* Efeito de balão de mensagem */
+.chat-message.bot-message:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #007BFF;
+}
+
+/* Estilo da área de entrada de texto */
+.chat-input {
+    display: flex;
+    margin-top: 15px;
+}
+
+.chat-input input {
+    width: 85%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da caixa lateral */
+.side-box {
+    width: 35%; /* Reduzindo a largura da caixa lateral */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-box h1 {
+
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.side-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.side-box li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.side-box li:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.logout-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

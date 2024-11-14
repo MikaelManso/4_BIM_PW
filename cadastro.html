@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="./assets/cadastro.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Cadastro</h2>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="newUsername">Nome de usuário:</label>
+                <input type="text" id="newUsername" name="newUsername" placeholder="Escolha um nome de usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Senha:</label>
+                <input type="password" id="newPassword" name="newPassword" placeholder="Escolha uma senha" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirmar Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- Link para voltar à tela de login -->
+        <p>Já tem uma conta? <a href="./login.html">Faça login aqui</a></p>
+    </div>
+
+    <script src="./src/cadastro.js"></script>
+</body>
+</html>
